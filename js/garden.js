@@ -180,7 +180,7 @@ if(count === 100)
         setTimeout(() =>
         {
             letter.style.display = "none";
-        },15000);
+        },30000);
     }
 }
 }

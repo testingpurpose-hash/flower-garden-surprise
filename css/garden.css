@@ -116,25 +116,7 @@ button:hover{
 /* MOON */
 
 .moon{
-    position:absolute;
-
-    top:50px;
-    right:80px;
-
-    width:80px;
-    height: 80px;
-
-    border-radius:50%;
-
-    background:white;
-
-
-box-shadow:
-0 0 40px white,
-0 0 80px white,
-0 0 150px rgba(255,255,255,.8),
-0 0 250px rgba(255,255,255,.3);
-    z-index:2;
+    display: none;
 }
 
 /* STARS */

@@ -11,8 +11,7 @@ function checkPassword()
 
     if(pass === "090109")
     {
-        window.location.href =
-        "pages/garden.html";
+        window.location.href = "pages/page1.html";
     }
     else
     {
