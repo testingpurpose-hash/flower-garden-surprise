@@ -47,6 +47,7 @@ body::before{
     z-index:100;
 }
 
+
 .message h1{
 
     font-size:4.5rem;
@@ -89,7 +90,7 @@ button{
     background:#ff6fae;
     color:white;
 
-    z-index:1000;
+    z-index:2000;
 
     transition:.3s;
 }
@@ -128,9 +129,11 @@ button:hover{
     background:white;
 
 
-  box-shadow:
-0 0 20px rgba(255,255,255,.8),
-0 0 50px rgba(255,255,255,.4);
+box-shadow:
+0 0 40px white,
+0 0 80px white,
+0 0 150px rgba(255,255,255,.8),
+0 0 250px rgba(255,255,255,.3);
     z-index:2;
 }
 
@@ -244,21 +247,35 @@ button:hover{
     transform-origin:bottom center;
 
     animation:flowerAppear .8s ease forwards;
-}
 
+    filter:
+    drop-shadow(0 6px 10px rgba(0,0,0,.45));
+
+    z-index:5;
+}
 @keyframes flowerAppear{
 
-    from{
+    0%{
         opacity:0;
-        transform:scale(0);
+        transform:
+        translateY(40px)
+        scale(0.2);
     }
 
-    to{
+    70%{
         opacity:1;
-        transform:scale(1);
+        transform:
+        translateY(-10px)
+        scale(1.08);
+    }
+
+    100%{
+        opacity:1;
+        transform:
+        translateY(0)
+        scale(1);
     }
 }
-
 /* STEM GROWTH */
 
 .stemGrow{
@@ -371,4 +388,56 @@ body::before{
     to{
         transform:translateY(100vh);
     }
+}
+/* FLOATING PETALS */
+
+.petal{
+    position:fixed;
+
+    top:-50px;
+
+    font-size:24px;
+
+    pointer-events:none;
+
+    z-index:20;
+
+    animation:fallPetal linear forwards;
+}
+
+@keyframes fallPetal{
+
+    0%{
+        transform:
+        translateX(0)
+        rotate(0deg);
+
+        opacity:1;
+    }
+
+    100%{
+        transform:
+        translateX(150px)
+        translateY(110vh)
+        rotate(360deg);
+
+        opacity:0;
+    }
+}
+#flowerCounter{
+    position:fixed;
+    top:20px;
+    left:20px;
+
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(10px);
+
+    padding:10px 20px;
+    border-radius:15px;
+
+    color:white;
+    font-size:1.2rem;
+    font-weight:bold;
+
+    z-index:9999;
 }

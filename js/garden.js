@@ -16,6 +16,8 @@ function createFlower(x,y)
     }
 
     count++;
+    document.getElementById("flowerCounter").innerHTML =
+"🌸 Flowers: " + count;
 const flowers =
 [
     createTulip,
@@ -31,6 +33,11 @@ flowers[Math.floor(Math.random() * flowers.length)];
 const flower =
 randomFlower();
 flower.style.position = "absolute";
+const scale =
+0.75 + Math.random() * 0.6;
+
+flower.style.transform =
+`scale(${scale})`;
 
 const flowerWidth = 90;
 const flowerHeight = 140;
@@ -72,7 +79,12 @@ flower.style.top =
 
         if(letter)
         {
-            letter.style.display = "block";
+           letter.style.display = "block";
+
+setTimeout(function()
+{
+    letter.style.display = "none";
+},5000);
         }
     }
 }
@@ -580,3 +592,30 @@ musicBtn.onclick = function()
         "🎵 Music";
     }
 };
+/* ==========================
+   FLOATING PETALS
+========================== */
+
+setInterval(function()
+{
+    const petal =
+    document.createElement("div");
+
+    petal.className = "petal";
+
+    petal.innerHTML = "🌸";
+
+    petal.style.left =
+    Math.random() * window.innerWidth + "px";
+
+    petal.style.animationDuration =
+    (6 + Math.random() * 5) + "s";
+
+    document.body.appendChild(petal);
+
+    setTimeout(function()
+    {
+        petal.remove();
+    },11000);
+
+},1200);
