@@ -1,0 +1,61 @@
+    <!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>One Question ❤️</title>
+<link rel="stylesheet" href="../css/story.css">
+</head>
+<body>
+
+<div class="card">
+
+<h1>❤️ One Important Question ❤️</h1>
+
+<p>
+Will you stay with me forever?
+</p>
+
+<br>
+
+<button onclick="yesClick()">
+🥰 Yes
+</button>
+
+<button id="noBtn"
+onmouseover="moveButton()"
+onclick="moveButton()">
+😜 No
+</button>
+
+</div>
+
+<script>
+
+function yesClick()
+{
+    alert("Hehe 😆❤️ Thank you, I knew you would.");
+
+    setTimeout(() =>
+    {
+        window.location.href = "page2.html";
+    }, 1000);
+}
+
+function moveButton()
+{
+    const btn =
+    document.getElementById("noBtn");
+
+    btn.style.position = "absolute";
+
+    btn.style.left =
+    Math.random()*70 + "%";
+
+    btn.style.top =
+    Math.random()*70 + "%";
+}
+
+</script>
+
+</body>
+</html>
