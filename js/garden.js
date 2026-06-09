@@ -87,6 +87,102 @@ setTimeout(function()
 },5000);
         }
     }
+    if(count === 75)
+{
+    const letter =
+    document.getElementById("loveLetter");
+
+    if(letter)
+    {
+        letter.innerHTML =
+        `
+        🌸 75 FLOWERS BLOOMED 🌸
+
+        By now, this garden is filled with flowers.
+
+        But the most beautiful thing here isn't the roses,
+        tulips, or sunflowers.
+
+        It's the person this garden was made for.
+
+        Your kindness, patience, and the way you care
+        about others make you truly special.
+
+        Never forget how valuable you are.
+
+        Keep smiling, keep dreaming,
+        and keep being yourself.
+
+        The world needs more people like you.
+
+        ❤️
+        `;
+
+        letter.style.display = "block";
+
+        setTimeout(() =>
+        {
+            letter.style.display = "none";
+        },15000);
+    }
+}
+if(count === 100)
+{
+    const letter =
+    document.getElementById("loveLetter");
+
+    if(letter)
+    {
+        letter.innerHTML =
+        `
+        💖 100 FLOWERS BLOOMED 💖
+
+        Before this garden fades,
+        there is one last thing I want to say.
+
+        Thank you for always understanding me.
+
+        Thank you for supporting my efforts,
+        respecting the work I put in,
+        and encouraging me even when things were not easy.
+
+        Thank you for always trying to make time,
+        for your instant replies,
+        for checking in,
+        and for staying connected
+        even when there were obstacles in the way.
+
+        Thank you for explaining things patiently
+        and helping me understand them better.
+
+        I truly hope you get everything
+        you wish for in life.
+
+        May happiness, success, peace,
+        and good health always stay with you.
+
+        I pray that God blesses you
+        with all the joy you deserve
+        and keeps a smile on your face
+        wherever life takes you.
+
+        Thank you for being part of this journey.
+
+        🌷 🌹 🌻 🌸
+
+        With gratitude,
+
+        ❤️ Ashhh ❤️
+        `;
+
+        letter.style.display = "block";
+
+        setTimeout(() =>
+        {
+            letter.style.display = "none";
+        },15000);
+    }
+}
 }
 
 /* ==========================
